@@ -11,6 +11,8 @@ namespace BulkyWeb.Data
             
         }
         public DbSet<Category> Categories { get; set; }
+		public DbSet<Actor> Actors { get; set; }
+		public DbSet<Movie> Movies { get; set; }	
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{

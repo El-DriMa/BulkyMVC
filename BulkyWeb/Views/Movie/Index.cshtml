@@ -1,0 +1,28 @@
+﻿@model List<Movie>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>
+                Movie Name
+            </th>
+            <th>
+                Release Date
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach(var obj in Model.OrderBy(x => x.Id))
+    {
+        <tr>
+            <td>@obj.Title </td>
+            <td>@obj.ReleaseDate.ToShortDateString()</td>
+        </tr>
+    }
+
+    </tbody>
+</table>
